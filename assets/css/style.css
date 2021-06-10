@@ -295,7 +295,7 @@
   font-size: 16px;
 }
 
-.course-option:first-child {
+.course-option:nth-of-type(1) {
   margin-top: 5px;
 }
 
