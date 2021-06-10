@@ -14,6 +14,14 @@
   font-size: 12px;
 }
 
+.part {
+  margin-top:20px;
+}
+
+.part:first-child {
+  margin-top: 0;
+}
+
 /*--- リンク ---*/
 .link-color {
   color: #01a6a4;
@@ -40,6 +48,57 @@
   border: 1px solid #d9d9d9;
   border-radius: 3px;
 }
+
+/* ラベルパーツ */
+.label-common {
+  display: block;
+  font-size: 12px;
+  color: #545658;
+}
+
+.label-cotion-common {
+  color: #dd4b39;
+}
+
+/* テキストボックス */
+.input-init {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0;
+  background: transparent;
+  border: none;
+  outline: none;
+  resize: none;
+}
+
+.input-common {
+  box-sizing: border-box;
+  height: 36px;
+  width: 100%;
+  padding: 5px;
+  margin-top: 5px;
+  color: #545658;
+  font-size: 13px;
+  line-height: 2;
+  background-color: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 3px;
+  
+}
+
+.input-common:focus {
+  background-color: #fff;
+  border-color: rgba(59, 133, 133, .4);
+  box-shadow: 0 0 0 2px rgba(1, 191, 189, .1);
+}
+
+
+/* ラジオボタン・チェックボックス（非表示） */
+.d-none-common {
+  display: none;
+}
+
 /*--- common style end ---*/
 
 .wrapper {
@@ -131,6 +190,169 @@
   margin-top: 20px;
 }
 
+/* name part */
+.name {
+  display: flex;
+}
+
+.name-content {
+  width: 50%;
+  margin-left: 16px;
+}
+
+.name-content:first-child {
+  margin-left: 0;
+}
+
+/* gender part */
+.gender-contents {
+  display: flex;
+  color: #545658;
+  font-size: 16px;
+  margin-top: 5px;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.gender-content {
+  margin-left: 15px;
+  cursor: pointer;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.gender-content:first-child {
+  margin-left: 0;
+}
+
+.gender-content span {
+  position: relative;
+  display: inline-block;
+  padding: 3px 3px 3px 20px;
+}
+
+.gender-content span::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 14px;
+  width: 14px;
+  background-color: #fbfbfb;
+  border: 1px solid #d9d9d9;
+  border-radius: 50%;
+}
+
+.d-none-common:checked + span::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  height: 8px;
+  width: 8px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  background-color: #01bfbd;
+}
+
+/* birth part */
+.birth-content {
+  position: relative;
+  top:0;
+  left:0;
+  margin-top: 8px;
+}
+
+.birth-content > .input-common {
+  margin-top: 0;
+}
+
+.birth-content::after {
+  content: '';
+  display: inline-block;
+  position: absolute;
+  right: 10px;
+  top: 45%;
+  transform: rotate(45deg);
+  height: 5px;
+  width: 5px;
+  border-right: 2px solid #d9d9d9;
+  border-bottom: 2px solid #d9d9d9;
+}
+
+.birth-input:focus {
+  background-color: #fbfbfb;
+  border-color: #d9d9d9;
+  box-shadow: initial;
+}
+
+/* course part */
+.course-option {
+  margin-top: 10px;
+  color: #545658;
+  font-size: 16px;
+}
+
+.course-option:first-child {
+  margin-top: 5px;
+}
+
+.course-option-content {
+  position: relative;
+  top: 0;
+  left: 0;
+  padding-left: 25px;
+}
+
+.course-option-content::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  height: 15px;
+  width: 15px;
+  margin-top: -8px;
+  border: 1px solid #d9d9d9;
+}
+
+.d-none-common:checked + .course-option-content::after {
+  content: '';
+  position: absolute;
+  left: 6px;
+  top: 50%;
+  transform: rotate(45deg);
+  height: 16px;
+  width: 8px;
+  margin-top: -12px;
+  border-right: 3px solid #01bfbd;
+  border-bottom: 3px solid #01bfbd;
+}
+
+/* remark part*/
+.remark-content {
+  height: 100px;
+}
+
+/* submit part */
+.submit-content {
+  padding: 13px;
+  background-color: #01bfbd;
+  color: #fff;
+  border: 1px solid #01bfbd;
+}
+
+.submit-content:hover {
+  background-color: #01a6a4;
+}
+
+.submit-content:active {
+  background-color: #fff;
+  color: #01a6a4;
+  border-color: #d9d9d9;
+}
+
 /*--- 利用規約 ---*/
 .agreement {
   font-size: 12px;
@@ -162,3 +384,4 @@
 .resend-mail {
   display: inline-block;
 }
+

@@ -30,6 +30,107 @@
             <!--
               ここに続きのHTMLを書いていきましょう
             -->
+            <!-- name part -->
+            <div class="name part">
+              <div class="name-content">
+                <p class="label-common">
+                  名字
+                  <span class="label-cotion-common">※</span>
+                </p>
+                <input type="text" name="name-last" class="input-init input-common" required>
+              </div>
+              <div class="name-content">
+                <p class="label-common">
+                  名前
+                  <span class="label-cotion-common">※</span>
+                </p>
+                <input type="text" name="name-first" class="input-init input-common" required>
+              </div>
+            </div>
+            <!-- gender part -->
+            <div class="gender part">
+              <p class="label-common">性別</p>
+              <div class="gender-contents">
+                <label class="gender-content">
+                  <input type="radio" name="gender" value="male" class="d-none-common">
+                  <span>男性</span>
+                </label>
+                <label class="gender-content">
+                  <input type="radio" name="gender" value="female" class="d-none-common">
+                  <span>女性</span>
+                </label>
+                <label class="gender-content">
+                  <input type="radio" name="gender" value="gender_other" class="d-none-common">
+                  <span>その他</span>
+                </label>
+              </div>
+            </div>
+            <!-- birth part -->
+            <div class="birth part is-halfWidth">
+              <p class="label-common">出身</p>
+              <div class="birth-content">
+                <select name="birth" id="birth" class="input-init input-common birth-input">
+                  <option value="東京">東京</option>
+                  <option value="千葉">千葉</option>
+                  <option value="埼玉">埼玉</option>
+                  <option value="神奈川">神奈川</option>
+                </select>
+              </div>
+            </div>
+            <!-- mail part -->
+            <div class="mail part">
+              <p class="label-common">
+                Eメール
+                <span class="label-cotion-common">※</span>
+              </p>
+              <input type="email" class="input-common input-init" name="email" placeholder="ex) hoge@example.com" required>
+            </div>
+            <!-- tel part -->
+            <div class="tel part">
+              <p class="label-common">電話番号</p>
+              <input type="tel" class="input-common input-init" name="tel" placeholder="ex) 09012345678">
+            </div>
+            <!-- pass part -->
+            <div class="pass part">
+              <p class="label-common">
+                パスワード
+                <span class="label-cotion-common">※</span>
+              </p>
+              <input type="password" class="input-common input-init" name="pass">
+            </div>
+            <!-- pass_confirm part -->
+            <div class="pass part">
+              <p class="label-common">
+                パスワード(確認用)
+                <span class="label-cotion-common">※</span>
+              </p>
+              <input type="password" class="input-common input-init" name="pass_confirm">
+            </div>
+            <!-- course part -->
+            <div class="course part">
+              <p class="label-common">希望コース</p>
+              <div class="course-option">
+                <input type="checkbox" name="course" value="front_end" id="front_end" class="d-none-common">
+                <label class="course-option-content" for="front_end">フロントエンド</label>
+              </div>
+              <div class="course-option">
+                <input type="checkbox" name="course" value="back_end" id="back_end" class="d-none-common">
+                <label class="course-option-content" for="back_end">バックエンド</label>
+              </div>
+              <div class="course-option">
+                <input type="checkbox" name="course" value="app" id="app" class="d-none-common">
+                <label class="course-option-content" for="app">アプリ</label>
+              </div>
+            </div>
+            <!-- remark part -->
+            <div class="remark part">
+              <p class="label-common">備考</p>
+              <textarea name="remark" placeholder="何かあればご記入ください" class="input-init input-common remark-content is-fullWidth"></textarea>
+            </div>
+            <!-- submit part -->
+            <div class="submit part">
+              <input type="submit" value="アカウント作成" class="input-init button submit-content is-fullWidth">
+            </div>
             <p class="agreement">アカウントを作成することにより、<a class="link-color" href>利用規約</a>と<a class="link-color" href>プライバシーポリシー</a>に同意するものとします。</p>
           </form>
         </div>
